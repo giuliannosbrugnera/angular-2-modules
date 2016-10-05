@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'my-app',
-  template: '<h1 highlight>{{title}}</h1>'
+  template: '<app-title [subtitle]="subtitle"></app-title>'
 })
 export class AppComponent {
-  title = 'Minimal NgModule';
+  subtitle = '(v1)';
 }
