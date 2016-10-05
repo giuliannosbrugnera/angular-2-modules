@@ -5,13 +5,18 @@ import { AppComponent } from './app.component';
 import { HighlightDirective } from './highlight.directive';
 import { TitleComponent } from './title.component';
 import { UserService } from './user.service';
-/* Contact Imports */
+/* Feature Modules */
 import { ContactModule } from './contact/contact.module';
+import { routing } from './app.routing';
 
 @NgModule({
-  imports: [BrowserModule, ContactModule],
-  declarations: [AppComponent, HighlightDirective, TitleComponent],
+  imports: [
+    BrowserModule,
+    ContactModule,
+    routing
+  ],
   providers: [UserService],
-  bootstrap: [AppComponent],
+  declarations: [AppComponent, HighlightDirective, TitleComponent],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }
